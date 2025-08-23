@@ -1,5 +1,5 @@
 {
-  "name": "native-base-rn081",
+  "name": "@htarikyavas/native-base",
   "description": "Essential cross-platform UI components for React Native",
   "sideEffects": false,
   "keywords": [
@@ -36,7 +36,7 @@
       "prettier --write"
     ]
   },
-  "version": "3.5.2",
+  "version": "1.0.0",
   "license": "MIT",
   "private": false,
   "main": "lib/commonjs/index",
