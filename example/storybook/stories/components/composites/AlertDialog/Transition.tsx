@@ -5,7 +5,7 @@ import type { TouchableOpacity } from 'react-native';
 export const Example = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const onClose = () => setIsOpen(false);
-  const cancelRef = React.useRef<TouchableOpacity>(null);
+  const cancelRef = React.useRef(null);
   return (
     <Center>
       <AlertDialog

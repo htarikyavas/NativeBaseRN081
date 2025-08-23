@@ -19,7 +19,7 @@ export type InterfaceCollapseProps = InterfaceBoxProps<ICollapseProps> & {
 export type ICollapseProps = InterfaceCollapseProps & CustomProps<'Box'>;
 
 function usePrevious(value: any) {
-  const ref = useRef();
+  const ref = useRef<any>(null);
   function updatePrevious(newVal: any) {
     ref.current = newVal;
   }
@@ -59,8 +59,8 @@ const Collapse = (
   const defaultStartHeight: any = isOpen
     ? endingHeight
     : startingHeight
-    ? startingHeight
-    : 1;
+      ? startingHeight
+      : 1;
   let animatedStyle = { height: defaultStartHeight };
   const animateView = () => {
     if (onAnimationStart) {
@@ -69,7 +69,7 @@ const Collapse = (
     animatedStyle = {
       height: isOpen ? endingHeight : defaultStartHeight,
     };
-    let callback = onAnimationEnd ? onAnimationEnd : () => {};
+    let callback = onAnimationEnd ? onAnimationEnd : () => { };
     LayoutAnimation.configureNext(CustomLayoutLinear, callback());
   };
 
