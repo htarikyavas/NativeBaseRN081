@@ -11,9 +11,9 @@ export const getResponsiveStylesImpl = (width: number) => (
   if (typeof width === 'number') {
     let styles = queries.initial
       ? [
-          StyleSheet.create({ initial: StyleSheet.flatten(queries.initial) })
-            .initial,
-        ]
+        StyleSheet.create({ initial: StyleSheet.flatten(queries.initial) })
+          .initial,
+      ]
       : [];
 
     if (queries.query) {
@@ -79,10 +79,12 @@ export const useDimensionsWithEnable = ({ enable }: { enable?: boolean }) => {
       handleChange({ window: Dimensions.get('window') });
 
       return () => {
-        Dimensions.removeEventListener('change', handleChange);
+        if ('removeEventListener' in Dimensions) {
+          (Dimensions as any).removeEventListener('change', handleChange);
+        }
       };
     }
-    return () => {};
+    return () => { };
   }, [dimensions, enable]);
   return dimensions;
 };

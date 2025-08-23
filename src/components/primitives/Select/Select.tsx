@@ -20,7 +20,7 @@ import type { ISelectItemProps } from './types';
 import { Pressable } from '../Pressable';
 
 export const SelectContext = React.createContext({
-  onValueChange: (() => {}) as any,
+  onValueChange: (() => { }) as any,
   selectedValue: null as any,
   _selectedItem: {} as IButtonProps,
   _item: {} as IButtonProps,
@@ -195,7 +195,8 @@ const Select = (
         <Actionsheet.Content {..._actionSheetContent}>
           {/* TODO: Replace ScrollVeiw with FlatList */}
           {optimized ? (
-            <FlatList
+            // @ts-ignore - FlatList TypeScript issues
+            <FlatList<any>
               {..._actionSheetBody}
               data={flatListData}
               // eslint-disable-next-line no-shadow

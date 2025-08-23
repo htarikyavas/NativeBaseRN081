@@ -2,9 +2,9 @@ import type { PressableProps } from 'react-native';
 import type { StyledProps } from '../../../theme/types';
 import type { CustomProps, PlatformProps } from '../../types';
 export interface InterfacePressableProps<T = IPressableProps>
-  extends PressableProps,
-    StyledProps,
-    PlatformProps<T> {
+  extends Omit<PressableProps, 'children'>,
+  StyledProps,
+  PlatformProps<T> {
   /**
    * Called when a mouse enters the Pressable
    */
@@ -65,16 +65,16 @@ export interface InterfacePressableProps<T = IPressableProps>
   _focusVisible?: Omit<Partial<T>, '_focusVisible'>;
 
   children?:
-    | React.ReactNode
-    | (({
-        isPressed,
-        isHovered,
-        isFocused,
-      }: {
-        isPressed: boolean;
-        isHovered: boolean;
-        isFocused: boolean;
-      }) => any);
+  | React.ReactNode
+  | (({
+    isPressed,
+    isHovered,
+    isFocused,
+  }: {
+    isPressed: boolean;
+    isHovered: boolean;
+    isFocused: boolean;
+  }) => any);
 }
 
 // export type IPressableProps<T> =

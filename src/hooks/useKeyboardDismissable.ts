@@ -51,9 +51,14 @@ export function useBackHandler({ enabled, callback }: IParams) {
     if (enabled) {
       BackHandler.addEventListener('hardwareBackPress', backHandler);
     } else {
-      BackHandler.removeEventListener('hardwareBackPress', backHandler);
+      if ('removeEventListener' in BackHandler) {
+        (BackHandler as any).removeEventListener('hardwareBackPress', backHandler);
+      }
     }
-    return () =>
-      BackHandler.removeEventListener('hardwareBackPress', backHandler);
+    return () => {
+      if ('removeEventListener' in BackHandler) {
+        (BackHandler as any).removeEventListener('hardwareBackPress', backHandler);
+      }
+    };
   }, [enabled, callback]);
 }

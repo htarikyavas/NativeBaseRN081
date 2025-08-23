@@ -97,9 +97,9 @@ function Slider({ isDisabled, isReadOnly, ...props }: ISliderProps, ref?: any) {
       <Box {...resolvedProps} ref={ref}>
         {React.Children.map(props.children, (child, index) => {
           if (child.displayName === 'SliderThumb') {
-            return React.cloneElement(child as React.ReactElement, {
+            return React.cloneElement(child as React.ReactElement<any>, {
               index,
-            });
+            } as any);
           }
 
           return child;

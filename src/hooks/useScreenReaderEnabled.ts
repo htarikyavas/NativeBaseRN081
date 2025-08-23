@@ -28,7 +28,11 @@ export function useScreenReaderEnabled() {
     setInitialValue();
     return () => {
       mountedRef.current = false;
-      AccessibilityInfo.removeEventListener('screenReaderChanged', handler);
+      if ('removeEventListener' in AccessibilityInfo) {
+        (AccessibilityInfo as any).removeEventListener('screenReaderChanged', handler);
+      } else if (handler && typeof handler.remove === 'function') {
+        handler.remove();
+      }
     };
   });
 

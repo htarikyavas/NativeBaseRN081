@@ -35,6 +35,19 @@ export interface InterfaceIconButtonProps
     | '_important'
     | 'fontFamily'
     | 'fontSize'
+    | 'fontStyle'
+    | 'fontWeight'
+    | 'letterSpacing'
+    | 'lineHeight'
+    | 'textAlign'
+    | 'textDecorationLine'
+    | 'textDecorationStyle'
+    | 'textTransform'
+    | 'onBlur'
+    | 'onFocus'
+    | 'onHoverIn'
+    | 'onHoverOut'
+    | 'textDecoration'
   >,
   PlatformProps<IIconButtonProps> {
   /**
