@@ -1,5 +1,5 @@
 {
-  "name": "native-base",
+  "name": "native-base-rn081",
   "description": "Essential cross-platform UI components for React Native",
   "sideEffects": false,
   "keywords": [
@@ -41,7 +41,7 @@
   "private": false,
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
-  "types": "lib/typescript/src/index.d.ts",
+  "types": "lib/typescript/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
   "typings": "lib/typescript/index.d.ts",
@@ -138,7 +138,8 @@
       "tagName": "v${version}"
     },
     "npm": {
-      "publish": true
+      "publish": true,
+      "registry": "https://registry.npmjs.org/"
     },
     "github": {
       "release": false
@@ -240,5 +241,9 @@
     "src",
     "lib",
     "cli.js"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
