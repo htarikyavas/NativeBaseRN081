@@ -7,9 +7,9 @@ const baseStyle = (props: any) => {
   const focusRing =
     Platform.OS === 'web'
       ? mode(
-          { boxShadow: `${primary[400]} 0px 0px 0px 2px`, zIndex: 1 },
-          { boxShadow: `${primary[500]} 0px 0px 0px 2px`, zIndex: 1 }
-        )(props)
+        { boxShadow: `${primary[400]} 0px 0px 0px 2px`, zIndex: 1 },
+        { boxShadow: `${primary[500]} 0px 0px 0px 2px`, zIndex: 1 }
+      )(props)
       : {};
 
   return {
@@ -21,8 +21,8 @@ const baseStyle = (props: any) => {
       cursor: props.isDisabled
         ? 'not-allowed'
         : props.isLoading
-        ? 'default'
-        : 'pointer',
+          ? 'default'
+          : 'pointer',
     },
     _text: {
       fontWeight: 'medium',
@@ -65,7 +65,7 @@ function variantGhost(props: Dict) {
     },
     bg: 'transparent',
     _web: {
-      outlineWidth: '0',
+      outlineWidth: 0,
     },
     _hover: {
       borderColor: mode(`${c}.500`, `${c}.200`)(props),
@@ -94,8 +94,8 @@ function variantOutline(props: Dict) {
       c === 'muted'
         ? borderColor
         : props.isDisabled
-        ? disabledTextColor(props)
-        : mode(`${c}.300`, `${c}.300`)(props),
+          ? disabledTextColor(props)
+          : mode(`${c}.300`, `${c}.300`)(props),
     ...variantGhost(props),
   };
 }
@@ -109,7 +109,7 @@ function variantSolid(props: Dict) {
 
   const styleObject = {
     _web: {
-      outlineWidth: '0',
+      outlineWidth: 0,
     },
     bg,
     _hover: {
@@ -166,7 +166,7 @@ function variantSubtle(props: Dict) {
       color: color,
     },
     _web: {
-      outlineWidth: '0',
+      outlineWidth: 0,
     },
     bg,
     _hover: {
@@ -196,8 +196,8 @@ function variantLink(props: Dict) {
         c === 'muted'
           ? mode(`muted.800`, `${c}.200`)(props)
           : props.isDisabled
-          ? disabledTextColor(props)
-          : mode(`${c}.500`, `${c}.300`)(props),
+            ? disabledTextColor(props)
+            : mode(`${c}.500`, `${c}.300`)(props),
     },
     _hover: {
       _text: {
