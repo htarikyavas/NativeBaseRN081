@@ -50,8 +50,8 @@ export const Tooltip = ({
 
   const targetRef = React.useRef(null);
 
-  const enterTimeout = React.useRef<any>();
-  const exitTimeout = React.useRef<any>();
+  const enterTimeout = React.useRef<any>(null);
+  const exitTimeout = React.useRef<any>(null);
   // const tooltipID = '';
   // const tooltipID = useId();
 

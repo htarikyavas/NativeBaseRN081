@@ -39,13 +39,14 @@ const Checkbox = (
   } = combineContextAndProps(formControlContext, props);
 
   const checkboxGroupContext = React.useContext(CheckboxGroupContext);
+  const { onFocus, onBlur, ...propsWithoutOnFocus } = props;
   const state = useToggleState({
-    ...props,
+    ...propsWithoutOnFocus,
     defaultSelected: props.defaultIsChecked,
     isSelected: props.isChecked,
   });
 
-  const _ref = React.useRef();
+  const _ref = React.useRef(null);
   const mergedRef = mergeRefs([ref, _ref]);
 
   // Swap hooks depending on whether this checkbox is inside a CheckboxGroup.
@@ -53,26 +54,26 @@ const Checkbox = (
   // but since the checkbox won't move in and out of a group, it should be safe.
   const { inputProps: groupItemInputProps } = checkboxGroupContext
     ? // eslint-disable-next-line react-hooks/rules-of-hooks
-      useCheckboxGroupItem(
-        {
-          ...combinedProps,
-          'aria-label': combinedProps.accessibilityLabel,
-          'value': combinedProps.value,
-        },
-        checkboxGroupContext.state,
-        //@ts-ignore
-        mergedRef
-      )
+    useCheckboxGroupItem(
+      {
+        ...combinedProps,
+        'aria-label': combinedProps.accessibilityLabel,
+        'value': combinedProps.value,
+      },
+      checkboxGroupContext.state,
+      //@ts-ignore
+      mergedRef
+    )
     : // eslint-disable-next-line react-hooks/rules-of-hooks
-      useCheckbox(
-        {
-          ...combinedProps,
-          'aria-label': combinedProps.accessibilityLabel,
-        },
-        state,
-        //@ts-ignore
-        mergedRef
-      );
+    useCheckbox(
+      {
+        ...combinedProps,
+        'aria-label': combinedProps.accessibilityLabel,
+      },
+      state,
+      //@ts-ignore
+      mergedRef
+    );
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const inputProps = React.useMemo(() => groupItemInputProps, [
@@ -113,7 +114,7 @@ const CheckboxComponent = React.memo(
     isHovered: isHoveredProp,
     isFocusVisible: isFocusVisibleProp,
   }: any) => {
-    const _ref = React.useRef();
+    const _ref = React.useRef(null);
     const { isHovered } = useHover({}, _ref);
 
     const { checked: isChecked, disabled: isDisabled } = inputProps;

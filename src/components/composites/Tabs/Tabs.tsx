@@ -84,7 +84,7 @@ const Tabs = ({ children, ...props }: ITabsProps, ref: any) => {
         return 'flex-start';
     }
   };
-  let tablistRef = React.useRef<any>();
+  let tablistRef = React.useRef<any>(null);
   let { tabListProps, tabPanelProps } = useTabs(mappedProps, state, tablistRef);
   //TODO: refactor for responsive prop
   if (useHasResponsiveProps(props)) {

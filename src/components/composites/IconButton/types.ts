@@ -33,6 +33,8 @@ export interface InterfaceIconButtonProps
     | '_android'
     | '_ios'
     | '_important'
+    | 'fontFamily'
+    | 'fontSize'
   >,
   PlatformProps<IIconButtonProps> {
   /**

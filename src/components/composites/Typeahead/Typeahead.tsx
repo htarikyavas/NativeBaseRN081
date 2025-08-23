@@ -82,10 +82,10 @@ const ComboBoxImplementation = React.forwardRef(
     const [layoutProps] = extractInObject(props, layoutPropsList);
     let state = useComboBoxState(props);
 
-    let triggerRef = React.useRef(null);
-    let inputRef = React.useRef(null);
-    let listBoxRef = React.useRef(null);
-    let popoverRef = React.useRef(null);
+    let triggerRef = React.useRef<any>(null);
+    let inputRef = React.useRef<any>(null);
+    let listBoxRef = React.useRef<any>(null);
+    let popoverRef = React.useRef<any>(null);
 
     let {
       buttonProps: triggerProps,
@@ -195,7 +195,7 @@ function ListBoxPopup(props: IListBoxProps) {
 function Option({ item, state }: { item: any; state: ComboBoxState<any> }) {
   const searchItemStyle = useThemeProps('TypeAheadSearchItem', {});
 
-  let ref = React.useRef(null);
+  let ref = React.useRef<any>(null);
   let isDisabled = state.disabledKeys.has(item.key);
   let isSelected = state.selectionManager.isSelected(item.key);
   let isFocused = state.selectionManager.focusedKey === item.key;

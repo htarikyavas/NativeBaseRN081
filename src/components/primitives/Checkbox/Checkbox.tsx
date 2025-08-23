@@ -48,7 +48,7 @@ const Checkbox = (
     defaultSelected: combinedProps.defaultIsChecked,
     isSelected: combinedProps.isChecked,
   });
-  const _ref = React.useRef();
+  const _ref = React.useRef(null);
   const mergedRef = mergeRefs([ref, _ref]);
 
   // Swap hooks depending on whether this checkbox is inside a CheckboxGroup.
@@ -56,19 +56,19 @@ const Checkbox = (
   // but since the checkbox won't move in and out of a group, it should be safe.
   const { inputProps: groupItemInputProps } = checkboxGroupContext
     ? // eslint-disable-next-line react-hooks/rules-of-hooks
-      useCheckboxGroupItem(
-        combinedProps,
-        checkboxGroupContext.state,
-        //@ts-ignore
-        mergedRef
-      )
+    useCheckboxGroupItem(
+      combinedProps,
+      checkboxGroupContext.state,
+      //@ts-ignore
+      mergedRef
+    )
     : // eslint-disable-next-line react-hooks/rules-of-hooks
-      useCheckbox(
-        combinedProps,
-        state,
-        //@ts-ignore
-        mergedRef
-      );
+    useCheckbox(
+      combinedProps,
+      state,
+      //@ts-ignore
+      mergedRef
+    );
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const inputProps = React.useMemo(() => groupItemInputProps, [
@@ -107,7 +107,7 @@ const CheckboxComponent = React.memo(
     isPressed: isPressedProp,
     isFocused: isFocusedProp,
   }: any) => {
-    const _ref = React.useRef();
+    const _ref = React.useRef(null);
     const { hoverProps, isHovered } = useHover();
     const { pressableProps, isPressed } = useIsPressed();
     const { focusProps, isFocused } = useFocus();

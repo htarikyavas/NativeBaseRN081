@@ -131,7 +131,7 @@ const RadioComponent = memo(
               {/* radio */}
               <Center {...resolvedProps}>
                 {icon && sizedIcon && isChecked ? (
-                  sizedIcon()
+                  sizedIcon?.()
                 ) : (
                   <CircleIcon {..._icon} opacity={isChecked ? 1 : 0} />
                 )}
@@ -165,7 +165,7 @@ const Radio = (
     { ...formControlContext, ...contextState },
     props
   );
-  const inputRef = React.useRef(null);
+  const inputRef = React.useRef<any>(null);
   const radioState = useRadio(
     { ...combinedProps, 'aria-label': props.accessibilityLabel, children },
     contextState.state ?? {},
