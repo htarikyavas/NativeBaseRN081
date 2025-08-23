@@ -69,11 +69,11 @@ export interface InterfaceButtonProps
   /**
    * The start icon element to use in the button.
    */
-  startIcon?: JSX.Element | Array<JSX.Element>;
+  startIcon?: React.JSX.Element | Array<React.JSX.Element>;
   /**
    * The end icon element to use in the button.
    */
-  endIcon?: JSX.Element | Array<JSX.Element>;
+  endIcon?: React.JSX.Element | Array<React.JSX.Element>;
   /**
    * The end icon element to use in the button.
    */
@@ -81,7 +81,7 @@ export interface InterfaceButtonProps
   /**
    * The spinner element to use when isLoading is set to true.
    */
-  spinner?: JSX.Element;
+  spinner?: React.JSX.Element;
   /**
    * If true, the button will be disabled.
    */
@@ -129,11 +129,11 @@ export interface InterfaceButtonProps
   /**
    * The right icon element to use in the button.
    */
-  rightIcon?: JSX.Element | Array<JSX.Element>;
+  rightIcon?: React.JSX.Element | Array<React.JSX.Element>;
   /**
    * The left icon element to use in the button.
    */
-  leftIcon?: JSX.Element | Array<JSX.Element>;
+  leftIcon?: React.JSX.Element | Array<React.JSX.Element>;
 }
 
 export interface IButtonGroupProps extends IStackProps {
@@ -145,7 +145,7 @@ export interface IButtonGroupProps extends IStackProps {
   /**
    *
    */
-  children: JSX.Element | Array<JSX.Element>;
+  children: React.JSX.Element | Array<React.JSX.Element>;
   /**
    * The variant of the button style to use.
    * @default 'solid'
@@ -176,9 +176,9 @@ export interface IButtonGroupProps extends IStackProps {
 
 export type IButtonComponentType = ((
   props: IButtonProps & { ref?: MutableRefObject<any> }
-) => JSX.Element) & {
+) => React.JSX.Element) & {
   Group: React.MemoExoticComponent<
-    (props: IButtonGroupProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: IButtonGroupProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
 };
 

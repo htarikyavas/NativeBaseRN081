@@ -14,8 +14,8 @@ import type { MutableRefObject, RefCallback } from 'react';
 
 export interface InterfaceInputProps
   extends PlatformProps<IInputProps>,
-    Omit<TextInputProps, 'textAlign'>,
-    StyledProps {
+  Omit<TextInputProps, 'textAlign'>,
+  StyledProps {
   /**
    * If true, the input will indicate an error.
    */
@@ -57,19 +57,19 @@ export interface InterfaceInputProps
   /**
    * If given, adds the provided element to the left of the input.
    */
-  InputLeftElement?: JSX.Element | JSX.Element[];
+  InputLeftElement?: React.JSX.Element | React.JSX.Element[];
   /**
    * If given, adds the provided element to the left of the input.
    */
-  leftElement?: JSX.Element | JSX.Element[];
+  leftElement?: React.JSX.Element | React.JSX.Element[];
   /**
    * If given, adds the provided element to the right of the input.
    */
-  InputRightElement?: JSX.Element | JSX.Element[];
+  InputRightElement?: React.JSX.Element | React.JSX.Element[];
   /**
    * If given, adds the provided element to the right of the input.
    */
-  rightElement?: JSX.Element | JSX.Element[];
+  rightElement?: React.JSX.Element | React.JSX.Element[];
   /**
    * Using the type password, user can mask the input.
    */
@@ -127,6 +127,6 @@ export interface IInputGroupProps extends InterfaceBoxProps<IInputGroupProps> {
   size?: ResponsiveValue<ISizes | (string & {}) | number>;
 }
 
-export type IInputComponentType = (props: IInputProps) => JSX.Element;
+export type IInputComponentType = (props: IInputProps) => React.JSX.Element;
 
 export type IInputProps = InterfaceInputProps & CustomProps<'Input'>;

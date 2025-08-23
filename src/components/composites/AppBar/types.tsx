@@ -7,10 +7,10 @@ export type IAppBarProps = InterfaceStackProps & {
   space?: number;
 };
 
-export type IAppBarComponentType = ((props: IAppBarProps) => JSX.Element) & {
-  Left: React.MemoExoticComponent<(props: InterfaceStackProps) => JSX.Element>;
-  Right: React.MemoExoticComponent<(props: InterfaceStackProps) => JSX.Element>;
+export type IAppBarComponentType = ((props: IAppBarProps) => React.JSX.Element) & {
+  Left: React.MemoExoticComponent<(props: InterfaceStackProps) => React.JSX.Element>;
+  Right: React.MemoExoticComponent<(props: InterfaceStackProps) => React.JSX.Element>;
   Content: React.MemoExoticComponent<
-    (props: InterfaceStackProps) => JSX.Element
+    (props: InterfaceStackProps) => React.JSX.Element
   >;
 };

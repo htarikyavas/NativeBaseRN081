@@ -23,13 +23,13 @@ export type IAlertContext = {
   variant?: string;
 };
 
-export interface IAlertIconProps extends IIconProps {}
+export interface IAlertIconProps extends IIconProps { }
 
 export type IAlertComponentType = ((
   props: IAlertProps & { ref?: MutableRefObject<any> }
-) => JSX.Element) & {
+) => React.JSX.Element) & {
   Icon: React.MemoExoticComponent<
-    (props: IAlertIconProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: IAlertIconProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
 };
 

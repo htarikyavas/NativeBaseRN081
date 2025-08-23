@@ -9,7 +9,7 @@ export interface IBreadcrumbItemContext {
 
 export interface InterfaceBreadcrumbProps extends IHStackProps {
   spacing?: SpaceType;
-  separator?: string | JSX.Element | JSX.Element[] | any;
+  separator?: string | React.JSX.Element | React.JSX.Element[] | any;
   maxItems?: number | number[];
   _button?: any;
   isCollapsed?: boolean;
@@ -27,20 +27,20 @@ export interface IBreadcrumbTextProps extends ITextProps {
 }
 export type IBreadcrumbComponentType = ((
   props: IBreadcrumbProps & { ref?: MutableRefObject<any> }
-) => JSX.Element) & {
+) => React.JSX.Element) & {
   Item: React.MemoExoticComponent<
     (
       props: IBreadcrumbItemProps & { ref?: MutableRefObject<any> }
-    ) => JSX.Element
+    ) => React.JSX.Element
   >;
   Link: React.MemoExoticComponent<
-    (props: ILinkProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: ILinkProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
   Icon: React.MemoExoticComponent<
-    (props: IBreadcrumbIconProps & { ref?: any }) => JSX.Element
+    (props: IBreadcrumbIconProps & { ref?: any }) => React.JSX.Element
   >;
   Text: React.MemoExoticComponent<
-    (props: IBreadcrumbTextProps & { ref?: any }) => JSX.Element
+    (props: IBreadcrumbTextProps & { ref?: any }) => React.JSX.Element
   >;
 };
 

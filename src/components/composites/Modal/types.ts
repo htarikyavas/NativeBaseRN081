@@ -90,7 +90,7 @@ export interface InterfaceModalProps extends InterfaceBoxProps<IModalProps> {
 
 export type IModalComponentType = ((
   props: IModalProps & { ref?: MutableRefObject<any> }
-) => JSX.Element) & {
+) => React.JSX.Element) & {
   Body: React.MemoExoticComponent<
     (
       props: InterfaceBoxProps<IModalProps> & {
@@ -98,25 +98,25 @@ export type IModalComponentType = ((
       } & {
         ref?: MutableRefObject<any>;
       }
-    ) => JSX.Element
+    ) => React.JSX.Element
   >;
   CloseButton: React.MemoExoticComponent<
-    (props: IIconButtonProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: IIconButtonProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
   Content: React.MemoExoticComponent<
     (
       props: InterfaceBoxProps<IModalProps> & { ref?: MutableRefObject<any> }
-    ) => JSX.Element
+    ) => React.JSX.Element
   >;
   Footer: React.MemoExoticComponent<
     (
       props: InterfaceBoxProps<IModalProps> & { ref?: MutableRefObject<any> }
-    ) => JSX.Element
+    ) => React.JSX.Element
   >;
   Header: React.MemoExoticComponent<
     (
       props: InterfaceBoxProps<IModalProps> & { ref?: MutableRefObject<any> }
-    ) => JSX.Element
+    ) => React.JSX.Element
   >;
 };
 

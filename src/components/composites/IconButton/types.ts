@@ -6,35 +6,35 @@ import type { CustomProps, VariantType } from '../../types';
 import type { ThemeComponentSizeType } from '../../../components/types/utils';
 export interface InterfaceIconButtonProps
   extends Omit<
-      InterfacePressableProps<InterfaceIconButtonProps>,
-      | 'children'
-      | 'color'
-      | '_light'
-      | '_dark'
-      | '_web'
-      | '_android'
-      | '_ios'
-      | '_important'
-    >,
-    Omit<
-      IIconProps,
-      | 'delayLongPress'
-      | 'disabled'
-      | 'hitSlop'
-      | 'onLongPress'
-      | 'onPress'
-      | 'onPressIn'
-      | 'onPressOut'
-      | 'style'
-      | 'size'
-      | '_light'
-      | '_dark'
-      | '_web'
-      | '_android'
-      | '_ios'
-      | '_important'
-    >,
-    PlatformProps<IIconButtonProps> {
+    InterfacePressableProps<InterfaceIconButtonProps>,
+    | 'children'
+    | 'color'
+    | '_light'
+    | '_dark'
+    | '_web'
+    | '_android'
+    | '_ios'
+    | '_important'
+  >,
+  Omit<
+    IIconProps,
+    | 'delayLongPress'
+    | 'disabled'
+    | 'hitSlop'
+    | 'onLongPress'
+    | 'onPress'
+    | 'onPressIn'
+    | 'onPressOut'
+    | 'style'
+    | 'size'
+    | '_light'
+    | '_dark'
+    | '_web'
+    | '_android'
+    | '_ios'
+    | '_important'
+  >,
+  PlatformProps<IIconButtonProps> {
   /**
    * The color of the radio when it's checked. This should be one of the color keys in the theme (e.g."green", "red").
    * @default 'primary'
@@ -56,7 +56,7 @@ export interface InterfaceIconButtonProps
   /**
    * The icon to be used. Refer to the Icon section of the docs for the available icon options.
    */
-  icon?: JSX.Element;
+  icon?: React.JSX.Element;
   /**
    * Props to be passed to the icon used inside of IconButton.
    */

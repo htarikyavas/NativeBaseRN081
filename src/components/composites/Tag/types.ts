@@ -8,6 +8,6 @@ export interface InterfaceTagProps extends InterfaceBoxProps<ITagProps> {
   size?: string | number;
 }
 
-export type IInputComponentType = (props: ITagProps) => JSX.Element;
+export type IInputComponentType = (props: ITagProps) => React.JSX.Element;
 
 export type ITagProps = InterfaceTagProps & CustomProps<'Tag'>;

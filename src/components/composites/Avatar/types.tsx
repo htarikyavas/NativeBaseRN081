@@ -25,13 +25,13 @@ export interface InterfaceAvatarProps extends InterfaceBoxProps<IAvatarProps> {
 }
 
 export interface IAvatarBadgeProps
-  extends InterfaceBoxProps<IAvatarBadgeProps> {}
+  extends InterfaceBoxProps<IAvatarBadgeProps> { }
 
 export interface IAvatarGroupProps extends IAvatarProps {
   /**
    * Avatar children
    */
-  children?: JSX.Element[] | JSX.Element;
+  children?: React.JSX.Element[] | React.JSX.Element;
   /**
    * The distance each avatar.
    */
@@ -58,12 +58,12 @@ export interface IAvatarGroupProps extends IAvatarProps {
 
 export type IAvatarComponentType = ((
   props: IAvatarProps & { ref?: MutableRefObject<any> }
-) => JSX.Element) & {
+) => React.JSX.Element) & {
   Group: React.MemoExoticComponent<
-    (props: IAvatarGroupProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: IAvatarGroupProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
   Badge: React.MemoExoticComponent<
-    (props: IAvatarBadgeProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: IAvatarBadgeProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
 };
 

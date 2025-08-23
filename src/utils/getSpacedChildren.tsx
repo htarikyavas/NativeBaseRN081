@@ -18,7 +18,7 @@ type SpaceType =
 // Original source: https://github.com/gregberge/react-flatten-children
 type ReactChildArray = ReturnType<typeof React.Children.toArray>;
 function flattenChildren(
-  children: JSX.Element[] | JSX.Element,
+  children: React.JSX.Element[] | React.JSX.Element,
   keys: (string | number)[] = []
 ): ReactChildArray {
   const childrenArray = React.Children.toArray(children);
@@ -48,11 +48,11 @@ function flattenChildren(
 }
 
 const getSpacedChildren = (
-  children: JSX.Element[] | JSX.Element,
+  children: React.JSX.Element[] | React.JSX.Element,
   space: undefined | SpaceType,
   axis: 'X' | 'Y',
   reverse: string,
-  divider: JSX.Element | undefined
+  divider: React.JSX.Element | undefined
 ): any => {
   let childrenArray = React.Children.toArray(flattenChildren(children));
   childrenArray =

@@ -18,13 +18,13 @@ export type INumberInputProps = (InterfaceInputProps &
     clampValueOnBlur?: boolean;
     focusInputOnChange?: boolean;
     getAriaValueText?: boolean;
-    children?: JSX.Element[] | JSX.Element;
+    children?: React.JSX.Element[] | React.JSX.Element;
   }) &
   CustomProps<'NumberInput'>;
 
 export type INumberInputFieldProps = IInputProps & {};
 export type INumberInputSteppersProps = IStackProps & {
-  children: JSX.Element[] | JSX.Element;
+  children: React.JSX.Element[] | React.JSX.Element;
 };
 export type INumberInputStepperProps = InterfaceBoxProps<INumberInputStepperProps> & {
   isDisabled?: boolean;

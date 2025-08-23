@@ -10,7 +10,7 @@ export interface InterfaceStackProps extends InterfaceBoxProps<IStackProps> {
   /**
    * The divider element to use between elements.
    */
-  divider?: JSX.Element;
+  divider?: React.JSX.Element;
   /**
    * The space between each stack item. Accepts Responsive values
    */

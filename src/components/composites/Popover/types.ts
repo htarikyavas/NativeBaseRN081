@@ -50,7 +50,7 @@ export interface InterfacePopoverProps {
   /**
    * Function that returns a React Element. This element will be used as a Trigger for the popover.
    */
-  trigger: (_props: any, state: { open: boolean }) => JSX.Element;
+  trigger: (_props: any, state: { open: boolean }) => React.JSX.Element;
   /**
    * The additional offset applied along the cross axis between the element and its trigger element.
    */
@@ -78,18 +78,18 @@ export interface InterfacePopoverProps {
    * @default bottom
    */
   placement?:
-    | 'top'
-    | 'bottom'
-    | 'left'
-    | 'right'
-    | 'top left'
-    | 'top right'
-    | 'bottom left'
-    | 'bottom right'
-    | 'right top'
-    | 'right bottom'
-    | 'left top'
-    | 'left bottom';
+  | 'top'
+  | 'bottom'
+  | 'left'
+  | 'right'
+  | 'top left'
+  | 'top right'
+  | 'bottom left'
+  | 'bottom right'
+  | 'right top'
+  | 'right bottom'
+  | 'left top'
+  | 'left bottom';
   /**
    * This function will be invoked when popover is closed. It'll also be called when user attempts to close the popover via Escape key or backdrop press.
    */
@@ -138,40 +138,40 @@ export type IScrollContentStyle = {
 };
 
 export interface IPopoverContentProps
-  extends InterfaceBoxProps<IPopoverContentProps> {}
+  extends InterfaceBoxProps<IPopoverContentProps> { }
 
 export type IPopoverComponentType = ((
   props: IPopoverProps & { ref?: MutableRefObject<any> }
-) => JSX.Element & { ref?: MutableRefObject<any> }) & {
+) => React.JSX.Element & { ref?: MutableRefObject<any> }) & {
   Body: React.MemoExoticComponent<
     (
       props: InterfaceBoxProps<IPopoverProps> & { ref?: MutableRefObject<any> }
-    ) => JSX.Element
+    ) => React.JSX.Element
   >;
   CloseButton: React.MemoExoticComponent<
     (
       props: Omit<IIconButtonProps, 'icon'> & { ref?: MutableRefObject<any> }
-    ) => JSX.Element
+    ) => React.JSX.Element
   >;
   Content: React.MemoExoticComponent<
     (
       props: IPopoverContentProps & { ref?: MutableRefObject<any> }
-    ) => JSX.Element
+    ) => React.JSX.Element
   >;
   Footer: React.MemoExoticComponent<
     (
       props: InterfaceBoxProps<IPopoverProps> & { ref?: MutableRefObject<any> }
-    ) => JSX.Element
+    ) => React.JSX.Element
   >;
   Header: React.MemoExoticComponent<
     (
       props: InterfaceBoxProps<IPopoverProps> & { ref?: MutableRefObject<any> }
-    ) => JSX.Element
+    ) => React.JSX.Element
   >;
   Arrow: React.MemoExoticComponent<
     (
       props: InterfaceBoxProps<IPopoverProps> & { ref?: MutableRefObject<any> }
-    ) => JSX.Element
+    ) => React.JSX.Element
   >;
 };
 

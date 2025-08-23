@@ -6,7 +6,7 @@ import type {
 } from '../../../components/types';
 export interface InterfaceSpinnerProps
   extends Omit<ActivityIndicatorProps, 'size'>,
-    Omit<StyledProps, 'size' | 'color'> {
+  Omit<StyledProps, 'size' | 'color'> {
   /**
    * Size of Spinner
    */
@@ -19,7 +19,7 @@ export interface InterfaceSpinnerProps
   //   | 'stroked'
   //   | 'squareDotted';
   // duration?: number;
-  // renderProp?: JSX.Element | JSX.Element[];
+  // renderProp?: React.JSX.Element | React.JSX.Element[];
 }
 
 export type ISpinnerProps = InterfaceSpinnerProps & CustomProps<'Spinner'>;

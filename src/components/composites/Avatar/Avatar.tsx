@@ -14,7 +14,7 @@ const Avatar = ({ children, ...props }: IAvatarProps, ref: any) => {
   );
 
   let Badge = <></>;
-  const remainingChildren: JSX.Element[] = [];
+  const remainingChildren: React.JSX.Element[] = [];
   //  Pop Badge from children
   React.Children.map(children, (child) => {
     if (
@@ -25,8 +25,8 @@ const Avatar = ({ children, ...props }: IAvatarProps, ref: any) => {
         size: child?.props?.size
           ? child?.props?.size
           : _badgeSize
-          ? _badgeSize[0]
-          : undefined,
+            ? _badgeSize[0]
+            : undefined,
       });
     } else {
       remainingChildren.push(child);

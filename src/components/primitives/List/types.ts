@@ -8,7 +8,7 @@ export interface IListProps extends IStackProps {
   /**
    * List's Children.
    */
-  children: JSX.Element[] | JSX.Element;
+  children: React.JSX.Element[] | React.JSX.Element;
   /**
    * Is ListItem Unordered?.
    */
@@ -77,17 +77,17 @@ export interface IListItemProps extends IPressableProps {
 }
 export type IListComponentType = ((
   props: IListProps & { ref?: any }
-) => JSX.Element) & {
+) => React.JSX.Element) & {
   Item: React.MemoExoticComponent<
-    (props: IListItemProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: IListItemProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
   Icon: React.MemoExoticComponent<
-    (props: IIconProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: IIconProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
   Ordered: React.MemoExoticComponent<
-    (props: IListProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: IListProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
   Unordered: React.MemoExoticComponent<
-    (props: IListProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: IListProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
 };

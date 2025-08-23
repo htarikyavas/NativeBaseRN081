@@ -54,19 +54,19 @@ export interface IFormControlErrorMessageProps extends IFormControlProps {
   /**
    * The right icon element to use in the FormControl.ErrorMessage.
    */
-  rightIcon?: JSX.Element | Array<JSX.Element>;
+  rightIcon?: React.JSX.Element | Array<React.JSX.Element>;
   /**
    * The left icon element to use in the FormControl.ErrorMessage.
    */
-  leftIcon?: JSX.Element | Array<JSX.Element>;
+  leftIcon?: React.JSX.Element | Array<React.JSX.Element>;
   /**
    * The start icon element to use in the FormControl.ErrorMessage.
    */
-  startIcon?: JSX.Element | Array<JSX.Element>;
+  startIcon?: React.JSX.Element | Array<React.JSX.Element>;
   /**
    * The end icon element to use in the FormControl.ErrorMessage.
    */
-  endIcon?: JSX.Element | Array<JSX.Element>;
+  endIcon?: React.JSX.Element | Array<React.JSX.Element>;
   /**
    * Props to be passed to the HStack used inside of FormControl.ErrorMessage.
    */
@@ -86,15 +86,15 @@ export interface IFormControlHelperTextProps extends IFormControlProps {
 
 export type FormControlComponentType = ((
   props: IFormControlProps
-) => JSX.Element) & {
+) => React.JSX.Element) & {
   Label: React.MemoExoticComponent<
-    (props: IFormControlLabelProps) => JSX.Element
+    (props: IFormControlLabelProps) => React.JSX.Element
   >;
   ErrorMessage: React.MemoExoticComponent<
-    (props: IFormControlErrorMessageProps) => JSX.Element
+    (props: IFormControlErrorMessageProps) => React.JSX.Element
   >;
   HelperText: React.MemoExoticComponent<
-    (props: IFormControlHelperTextProps) => JSX.Element
+    (props: IFormControlHelperTextProps) => React.JSX.Element
   >;
 };
 

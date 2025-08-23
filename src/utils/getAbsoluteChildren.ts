@@ -2,7 +2,7 @@ import React from 'react';
 import { Platform } from 'react-native';
 
 const getAbsoluteChildren = (
-  children: JSX.Element[] | JSX.Element,
+  children: React.JSX.Element[] | React.JSX.Element,
   reverse?: boolean
 ) => {
   let childrenArray = React.Children.toArray(children);

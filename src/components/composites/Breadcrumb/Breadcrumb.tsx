@@ -79,20 +79,20 @@ const Breadcrumb = (
       {children && !children.length
         ? children
         : getBreadcrumbSeparator(
-            children,
-            textProps,
-            maxItems,
-            _button,
-            collapsed,
-            setCollapsed
-          )}
+          children,
+          textProps,
+          maxItems,
+          _button,
+          collapsed,
+          setCollapsed
+        )}
     </HStack>
   );
 };
 
 // Returns children to be rendered
 const getBreadcrumbSeparator = (
-  children: JSX.Element[] | JSX.Element | any,
+  children: React.JSX.Element[] | React.JSX.Element | any,
   props: any,
   maxItems: number | number[] | undefined,
   _button: any,

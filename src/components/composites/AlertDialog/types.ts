@@ -91,21 +91,21 @@ export interface InterfaceAlertDialogProps
 
 export type IAlertDialogComponentType = ((
   props: IAlertDialogProps & { ref?: MutableRefObject<any> }
-) => JSX.Element) & {
+) => React.JSX.Element) & {
   Body: React.MemoExoticComponent<
-    (props: IBoxProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: IBoxProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
   CloseButton: React.MemoExoticComponent<
-    (props: IIconButtonProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: IIconButtonProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
   Content: React.MemoExoticComponent<
-    (props: IBoxProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: IBoxProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
   Footer: React.MemoExoticComponent<
-    (props: IBoxProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: IBoxProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
   Header: React.MemoExoticComponent<
-    (props: IBoxProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: IBoxProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
 };
 

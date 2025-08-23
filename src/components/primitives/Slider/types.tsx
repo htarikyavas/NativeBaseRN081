@@ -117,17 +117,17 @@ export interface ISliderThumbProps
 
 export type ISliderComponentType = ((
   props: ISliderProps & { ref?: MutableRefObject<any> }
-) => JSX.Element) & {
+) => React.JSX.Element) & {
   Thumb: React.MemoExoticComponent<
-    (props: ISliderThumbProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: ISliderThumbProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
   Track: React.MemoExoticComponent<
-    (props: ISliderTrackProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: ISliderTrackProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
   FilledTrack: React.MemoExoticComponent<
     (
       props: ISliderTrackFilledProps & { ref?: MutableRefObject<any> }
-    ) => JSX.Element
+    ) => React.JSX.Element
   >;
 };
 

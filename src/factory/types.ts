@@ -4,6 +4,6 @@ import type { IStateProps } from '../hooks/useThemeProps/propsFlattener';
 
 export type FactoryComponentProps = StyledProps &
   PlatformProps<StyledProps> & {
-    children?: string | JSX.Element | JSX.Element[];
+    children?: string | React.JSX.Element | React.JSX.Element[];
     _state?: IStateProps;
   };

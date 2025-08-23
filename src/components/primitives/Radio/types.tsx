@@ -56,7 +56,7 @@ export interface InterfaceRadioProps extends InterfaceBoxProps<IRadioProps> {
   /**
    * If given, will use this icon instead of the default.
    */
-  icon?: JSX.Element;
+  icon?: React.JSX.Element;
   /**
    * Ref to be passed to Icon's wrapper Box
    */
@@ -162,9 +162,9 @@ export type IUseRadioGroupReturnType = {
   };
 };
 
-export type IRadioComponentType = ((props: IRadioProps) => JSX.Element) & {
+export type IRadioComponentType = ((props: IRadioProps) => React.JSX.Element) & {
   Group: React.MemoExoticComponent<
-    (props: IRadioGroupProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: IRadioGroupProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
 };
 

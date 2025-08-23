@@ -11,10 +11,10 @@ import type { CustomProps, PlatformProps, ResponsiveValue } from '../../types';
 
 export interface InterfaceTextProps<T = ITextProps>
   extends PlatformProps<T>,
-    StyledProps,
-    TextProps {
+  StyledProps,
+  TextProps {
   /**
-   *  Renders components as Text children. Accepts a JSX.Element or an array of JSX.Element.
+   *  Renders components as Text children. Accepts a React.JSX.Element or an array of React.JSX.Element.
    */
   children?: React.ReactNode | string;
   /**

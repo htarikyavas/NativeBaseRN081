@@ -83,21 +83,21 @@ const StatMain = React.forwardRef(
 
 type IStatComponentType = ((
   props: IBoxProps & { ref?: any }
-) => JSX.Element) & {
+) => React.JSX.Element) & {
   Label: React.MemoExoticComponent<
-    (props: ITextProps & { ref?: any }) => JSX.Element
+    (props: ITextProps & { ref?: any }) => React.JSX.Element
   >;
   Number: React.MemoExoticComponent<
-    (props: ITextProps & { ref?: any }) => JSX.Element
+    (props: ITextProps & { ref?: any }) => React.JSX.Element
   >;
   HelpText: React.MemoExoticComponent<
-    (props: IBoxProps & { ref?: any }) => JSX.Element
+    (props: IBoxProps & { ref?: any }) => React.JSX.Element
   >;
   Arrow: React.MemoExoticComponent<
-    (props: IStatArrowProps & { ref?: any }) => JSX.Element
+    (props: IStatArrowProps & { ref?: any }) => React.JSX.Element
   >;
   Group: React.MemoExoticComponent<
-    (props: IStackProps & { ref?: any }) => JSX.Element
+    (props: IStackProps & { ref?: any }) => React.JSX.Element
   >;
 };
 

@@ -7,19 +7,19 @@ import { useHasResponsiveProps } from '../../../hooks/useHasResponsiveProps';
 
 const DEBUG_STYLES = false
   ? {
-      rows: {
-        borderWidth: '1px',
-      },
-      cols: {
-        borderWidth: '1px',
-      },
-    }
+    rows: {
+      borderWidth: '1px',
+    },
+    cols: {
+      borderWidth: '1px',
+    },
+  }
   : {
-      rows: {},
-      cols: {},
-    };
+    rows: {},
+    cols: {},
+  };
 
-const SimpleGrid = (props: ISimpleGridProps, ref?: any): JSX.Element => {
+const SimpleGrid = (props: ISimpleGridProps, ref?: any): React.JSX.Element => {
   const {
     columns,
     space,

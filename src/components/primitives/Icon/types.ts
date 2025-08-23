@@ -8,11 +8,11 @@ import type { CustomProps, ThemeComponentSizeType } from '../../types/utils';
 
 export interface InterfaceIconProps
   extends Omit<
-      SvgProps,
-      'opacity' | 'stroke' | 'height' | 'width' | 'transform' | 'color'
-    >,
-    StyledProps,
-    PlatformProps<IIconProps> {
+    SvgProps,
+    'opacity' | 'stroke' | 'height' | 'width' | 'transform' | 'color'
+  >,
+  StyledProps,
+  PlatformProps<IIconProps> {
   // name?: IconNameType;
   // type?: IconType;
   /**
@@ -40,7 +40,7 @@ export interface InterfaceIconProps
   /**
    *
    */
-  children?: JSX.Element[] | JSX.Element;
+  children?: React.JSX.Element[] | React.JSX.Element;
   /**
    *
    */
@@ -63,7 +63,7 @@ export interface IcreateIconProps {
   /**
    * Path element of the icon.
    */
-  path?: JSX.Element[] | JSX.Element;
+  path?: React.JSX.Element[] | React.JSX.Element;
   /**
    * The path of the SVG icon.
    */

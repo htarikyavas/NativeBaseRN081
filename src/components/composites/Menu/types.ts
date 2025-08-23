@@ -12,7 +12,7 @@ export interface InterfaceMenuProps extends InterfaceBoxProps<IMenuProps> {
   /**
    * Function that returns a React Element. This element will be used as a Trigger for the menu.
    */
-  trigger: (_props: any, state: { open: boolean }) => JSX.Element;
+  trigger: (_props: any, state: { open: boolean }) => React.JSX.Element;
   /**
    * This function will be invoked when the menu is opened.
    */
@@ -52,18 +52,18 @@ export interface InterfaceMenuProps extends InterfaceBoxProps<IMenuProps> {
    * @default 'bottom left'
    */
   placement?:
-    | 'top'
-    | 'bottom'
-    | 'left'
-    | 'right'
-    | 'top left'
-    | 'top right'
-    | 'bottom left'
-    | 'bottom right'
-    | 'right top'
-    | 'right bottom'
-    | 'left top'
-    | 'left bottom';
+  | 'top'
+  | 'bottom'
+  | 'left'
+  | 'right'
+  | 'top left'
+  | 'top right'
+  | 'bottom left'
+  | 'bottom right'
+  | 'right top'
+  | 'right bottom'
+  | 'left top'
+  | 'left bottom';
   /**
    * Whether the element should flip its orientation (e.g. top to bottom or left to right) when there is insufficient room for it to render completely.
    * @default true
@@ -87,7 +87,7 @@ export interface IMenuItemProps extends IPressableProps {
   /**
    * Children of Menu Item.
    */
-  children: string | JSX.Element | Array<JSX.Element>;
+  children: string | React.JSX.Element | Array<React.JSX.Element>;
   /**
    * Whether menu item is disabled.
    */
@@ -128,7 +128,7 @@ export interface IMenuGroupProps {
   /**
    * The children of the Menu group.
    */
-  children: JSX.Element | Array<JSX.Element>;
+  children: React.JSX.Element | Array<React.JSX.Element>;
   /**
    * Props to pass on to Text.
    */
@@ -162,22 +162,22 @@ export type IMenuOptionContextProps = {
 
 export type IMenuComponent = ((
   props: IMenuProps & { ref?: MutableRefObject<any> }
-) => JSX.Element) & {
+) => React.JSX.Element) & {
   Item: React.MemoExoticComponent<
-    (props: IMenuItemProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: IMenuItemProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
   Group: React.MemoExoticComponent<
-    (props: IMenuGroupProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: IMenuGroupProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
   ItemOption: React.MemoExoticComponent<
     (
       props: IMenuItemOptionProps & { ref?: MutableRefObject<any> }
-    ) => JSX.Element
+    ) => React.JSX.Element
   >;
   OptionGroup: React.MemoExoticComponent<
     (
       props: IMenuOptionGroupProps & { ref?: MutableRefObject<any> }
-    ) => JSX.Element
+    ) => React.JSX.Element
   >;
 };
 

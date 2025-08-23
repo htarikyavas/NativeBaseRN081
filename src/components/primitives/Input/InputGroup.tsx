@@ -34,7 +34,7 @@ const supplyPropsToChildren = (children: any, props: any) => {
     return result;
   }
 
-  return React.Children.map(children, (child: JSX.Element) => {
+  return React.Children.map(children, (child: React.JSX.Element) => {
     return React.cloneElement(child, props, child.props.children);
   });
 };

@@ -8,7 +8,7 @@ import type { ColorSchemeType } from '../../../components/types';
 
 export type InterfaceCircularProgressProps = InterfaceBoxProps<ICircularProgressProps> & {
   style?: ViewStyle;
-  children?: JSX.Element | JSX.Element[] | string;
+  children?: React.JSX.Element | React.JSX.Element[] | string;
   value: number;
   size?: ResponsiveValue<ISizes | (string & {}) | number>;
   thickness?: number;

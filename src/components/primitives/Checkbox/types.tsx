@@ -80,7 +80,7 @@ export interface InterfaceCheckbox extends InterfaceBoxProps<ICheckboxProps> {
   /**
    * If given, will use this icon instead of the default.
    */
-  icon?: JSX.Element;
+  icon?: React.JSX.Element;
   /**
    * Passed props wilICheckboxGroupPropsl be applied on disabled state.
    */
@@ -190,9 +190,9 @@ export interface IUseCheckboxGroupReturnType {
 
 export type ICheckboxComponentType = ((
   props: ICheckboxProps
-) => JSX.Element) & {
+) => React.JSX.Element) & {
   Group: React.MemoExoticComponent<
-    (props: ICheckboxGroupProps, ref?: MutableRefObject<any>) => JSX.Element
+    (props: ICheckboxGroupProps, ref?: MutableRefObject<any>) => React.JSX.Element
   >;
 };
 

@@ -34,7 +34,7 @@ const Badge = (
   if (endIcon && React.isValidElement(endIcon)) {
     endIcon = React.Children.map(
       endIcon,
-      (child: JSX.Element, index: number) => {
+      (child: React.JSX.Element, index: number) => {
         return React.cloneElement(child, {
           key: `badge-end-icon-${index}`,
           ..._icon,
@@ -46,7 +46,7 @@ const Badge = (
   if (startIcon && React.isValidElement(startIcon)) {
     startIcon = React.Children.map(
       startIcon,
-      (child: JSX.Element, index: number) => {
+      (child: React.JSX.Element, index: number) => {
         return React.cloneElement(child, {
           key: `badge-start-icon-${index}`,
           ..._icon,
@@ -65,7 +65,7 @@ const Badge = (
   );
 };
 
-export type IBadgeComponentType = (props: IBadgeProps) => JSX.Element;
+export type IBadgeComponentType = (props: IBadgeProps) => React.JSX.Element;
 
 export default memo(forwardRef(Badge)) as IBadgeComponentType;
 export type { IBadgeProps };

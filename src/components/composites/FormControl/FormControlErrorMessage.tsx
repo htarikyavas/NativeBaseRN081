@@ -38,7 +38,7 @@ const FormControlErrorMessage = (
   if (endIcon && React.isValidElement(endIcon)) {
     endIcon = React.Children.map(
       endIcon,
-      (child: JSX.Element, index: number) => {
+      (child: React.JSX.Element, index: number) => {
         return React.cloneElement(child, {
           key: `button-end-icon-${index}`,
           ..._text,
@@ -50,7 +50,7 @@ const FormControlErrorMessage = (
   if (startIcon && React.isValidElement(startIcon)) {
     startIcon = React.Children.map(
       startIcon,
-      (child: JSX.Element, index: number) => {
+      (child: React.JSX.Element, index: number) => {
         return React.cloneElement(child, {
           key: `button-start-icon-${index}`,
           ..._text,

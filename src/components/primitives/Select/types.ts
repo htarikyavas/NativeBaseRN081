@@ -62,15 +62,15 @@ export interface InterfaceSelectProps extends InterfaceBoxProps<ISelectProps> {
   /**
    * If given, updates the dropdown Icon
    */
-  dropdownIcon?: JSX.Element;
+  dropdownIcon?: React.JSX.Element;
   /**
    * If given, updates the dropdown Icon when opened
    */
-  dropdownOpenIcon?: JSX.Element;
+  dropdownOpenIcon?: React.JSX.Element;
   /**
    * If given, updates the dropdown Icon when closed
    */
-  dropdownCloseIcon?: JSX.Element;
+  dropdownCloseIcon?: React.JSX.Element;
   /**
    * Variant of the Select
    * @default outline
@@ -115,9 +115,9 @@ export interface ISelectItemProps extends InterfaceButtonProps {
 
 export type ISelectComponentType = ((
   props: ISelectProps & { ref?: MutableRefObject<any> }
-) => JSX.Element) & {
+) => React.JSX.Element) & {
   Item: React.MemoExoticComponent<
-    (props: ISelectItemProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: ISelectItemProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
 };
 export type ISelectProps = InterfaceSelectProps & CustomProps<'Select'>;

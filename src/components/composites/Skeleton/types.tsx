@@ -71,12 +71,12 @@ export interface ISkeletonTextProps extends IStackProps {
 
 export type ISkeletonComponentType = ((
   props: ISkeletonProps & { ref?: MutableRefObject<any> }
-) => JSX.Element) & {
+) => React.JSX.Element) & {
   Circle: React.MemoExoticComponent<
-    (props: ISkeletonProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: ISkeletonProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
   Text: React.MemoExoticComponent<
-    (props: ISkeletonTextProps & { ref?: MutableRefObject<any> }) => JSX.Element
+    (props: ISkeletonTextProps & { ref?: MutableRefObject<any> }) => React.JSX.Element
   >;
 };
 

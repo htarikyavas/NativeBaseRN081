@@ -5,7 +5,7 @@ import type { ISizes } from '../../../theme/base/sizes';
 
 export type IPinInputProps = (InterfaceInputProps & {
   onChange?: (value: string) => void;
-  children?: JSX.Element[] | JSX.Element;
+  children?: React.JSX.Element[] | React.JSX.Element;
   manageFocus?: boolean;
 }) &
   CustomProps<'PinInput'>;
@@ -16,11 +16,11 @@ export type IPinInputFieldProps = InterfaceInputProps & {
 };
 export type IPinInputComponentType = ((
   props: IPinInputProps & { ref?: MutableRefObject<any> }
-) => JSX.Element) & {
+) => React.JSX.Element) & {
   Field: React.MemoExoticComponent<
     (
       props: IPinInputFieldProps & { ref?: MutableRefObject<any> }
-    ) => JSX.Element
+    ) => React.JSX.Element
   >;
 };
 export type IPinInputContext = IPinInputProps & {

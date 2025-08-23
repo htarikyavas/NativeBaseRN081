@@ -56,20 +56,20 @@ export type ITabContextProps = {
 
 export type ITabsComponentType = ((
   props: ITabsProps & { ref?: any }
-) => JSX.Element) & {
+) => React.JSX.Element) & {
   Bar: React.MemoExoticComponent<
-    (props: ITabBarProps & { ref?: any }) => JSX.Element
+    (props: ITabBarProps & { ref?: any }) => React.JSX.Element
   >;
   Tab: React.MemoExoticComponent<
-    (props: ITabProps & { ref?: any }) => JSX.Element
+    (props: ITabProps & { ref?: any }) => React.JSX.Element
   >;
   Views: React.MemoExoticComponent<
-    (props: ITabViewsProps & { ref?: any }) => JSX.Element
+    (props: ITabViewsProps & { ref?: any }) => React.JSX.Element
   >;
   View: React.MemoExoticComponent<
-    (props: ITabViewProps & { ref?: any }) => JSX.Element
+    (props: ITabViewProps & { ref?: any }) => React.JSX.Element
   >;
   Icon: React.MemoExoticComponent<
-    (props: InterfaceIconProps & { ref?: any }) => JSX.Element
+    (props: InterfaceIconProps & { ref?: any }) => React.JSX.Element
   >;
 };

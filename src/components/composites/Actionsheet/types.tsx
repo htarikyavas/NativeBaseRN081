@@ -49,34 +49,34 @@ export interface IActionsheetContentProps
   _dragIndicator?: InterfaceBoxProps<IActionsheetContentProps>;
 }
 export interface IActionsheetFooterProps
-  extends InterfaceBoxProps<IActionsheetFooterProps> {}
+  extends InterfaceBoxProps<IActionsheetFooterProps> { }
 export interface IActionsheetHeaderProps
-  extends InterfaceBoxProps<IActionsheetHeaderProps> {}
+  extends InterfaceBoxProps<IActionsheetHeaderProps> { }
 export interface IActionsheetItemProps
-  extends Omit<InterfaceButtonProps, 'variant' | 'size' | 'colorScheme'> {}
+  extends Omit<InterfaceButtonProps, 'variant' | 'size' | 'colorScheme'> { }
 
 export type IActionsheetComponentType = ((
   props: IActionsheetProps & { ref?: MutableRefObject<any> }
-) => JSX.Element) & {
+) => React.JSX.Element) & {
   Content: React.MemoExoticComponent<
     (
       props: IActionsheetContentProps & { ref?: MutableRefObject<any> }
-    ) => JSX.Element
+    ) => React.JSX.Element
   >;
   Item: React.MemoExoticComponent<
     (
       props: IActionsheetItemProps & { ref?: MutableRefObject<any> }
-    ) => JSX.Element
+    ) => React.JSX.Element
   >;
   // Header: React.MemoExoticComponent<
   //   (
   //     props: IActionsheetHeaderProps & { ref?: MutableRefObject<any> }
-  //   ) => JSX.Element
+  //   ) => React.JSX.Element
   // >;
   // Footer: React.MemoExoticComponent<
   //   (
   //     props: IActionsheetFooterProps & { ref?: MutableRefObject<any> }
-  //   ) => JSX.Element
+  //   ) => React.JSX.Element
   // >;
 };
 

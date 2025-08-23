@@ -5,18 +5,18 @@ import type { CustomProps, PlatformProps } from '../../types';
 
 export interface InterfaceImageProps
   extends PlatformProps<IImageProps>,
-    Omit<
-      ImageProps,
-      | 'borderRadius'
-      | 'borderTopLeftRadius'
-      | 'borderTopRightRadius'
-      | 'borderBottomLeftRadius'
-      | 'borderBottomRightRadius'
-      | 'height'
-      | 'width'
-      | 'source'
-    >,
-    StyledProps {
+  Omit<
+    ImageProps,
+    | 'borderRadius'
+    | 'borderTopLeftRadius'
+    | 'borderTopRightRadius'
+    | 'borderBottomLeftRadius'
+    | 'borderBottomRightRadius'
+    | 'height'
+    | 'width'
+    | 'source'
+  >,
+  StyledProps {
   /**
    * specify a source for image.
    */
@@ -38,9 +38,9 @@ export interface InterfaceImageProps
    */
   _alt?: Partial<ITextProps>;
   /**
-   * In the event of an error loading the src, specify a fallback JSX Element.
+   * In the event of an error loading the src, specify a fallback React.JSX Element.
    */
-  fallbackElement?: JSX.Element | JSX.Element[];
+  fallbackElement?: React.JSX.Element | React.JSX.Element[];
   /**
    * specify a source for image.
    */

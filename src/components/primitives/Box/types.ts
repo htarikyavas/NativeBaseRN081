@@ -20,12 +20,12 @@ export interface ILinearGradientProps {
 
 export interface InterfaceBoxProps<T = null>
   extends ViewProps,
-    SafeAreaProps,
-    PlatformProps<T extends null ? IBoxProps<any> : T>,
-    Omit<StyledProps, 'bgColor' | 'background' | 'bg' | 'backgroundColor'> {
+  SafeAreaProps,
+  PlatformProps<T extends null ? IBoxProps<any> : T>,
+  Omit<StyledProps, 'bgColor' | 'background' | 'bg' | 'backgroundColor'> {
   /**
-   * Renders components as Box children. Accepts a JSX.Element or an array of JSX.Element. */
-  children?: JSX.Element | JSX.Element[] | string | any;
+   * Renders components as Box children. Accepts a React.JSX.Element or an array of React.JSX.Element. */
+  children?: React.JSX.Element | React.JSX.Element[] | string | any;
   // /**
   //  * Applies box shadow and accepts a number from 0 to 9
   //  * @default 0

@@ -9,7 +9,7 @@ import { useHasResponsiveProps } from '../../../hooks/useHasResponsiveProps';
 // Todo: Try using HStack instead
 
 const getAvatarGroupChildren = (
-  children?: JSX.Element[] | JSX.Element,
+  children?: React.JSX.Element[] | React.JSX.Element,
   space?: number,
   max?: number,
   _hiddenAvatarPlaceholder?: Object,

@@ -10,11 +10,11 @@ export interface InterfaceFabProps extends InterfaceButtonProps {
   /**
    * Text to be displayed in Fab.
    */
-  label?: JSX.Element | string;
+  label?: React.JSX.Element | string;
   /**
    * Icon to be displayed in Fab.
    */
-  icon?: JSX.Element;
+  icon?: React.JSX.Element;
   /**
    * Determines whether the Fab should be rendered in a Portal.
    * Refer to this solution before using this prop-

@@ -17,19 +17,19 @@ export interface InterfaceBadgeProps extends InterfaceBoxProps<IBadgeProps> {
   /**
    * The right icon element to use in the button.
    */
-  rightIcon?: JSX.Element | Array<JSX.Element>;
+  rightIcon?: React.JSX.Element | Array<React.JSX.Element>;
   /**
    * The left icon element to use in the button.
    */
-  leftIcon?: JSX.Element | Array<JSX.Element>;
+  leftIcon?: React.JSX.Element | Array<React.JSX.Element>;
   /**
    * The start icon element to use in the button.
    */
-  startIcon?: JSX.Element | Array<JSX.Element>;
+  startIcon?: React.JSX.Element | Array<React.JSX.Element>;
   /**
    * The end icon element to use in the button.
    */
-  endIcon?: JSX.Element | Array<JSX.Element>;
+  endIcon?: React.JSX.Element | Array<React.JSX.Element>;
   /**
    * Props to style the child text
    */

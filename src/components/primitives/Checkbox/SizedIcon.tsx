@@ -7,7 +7,7 @@ const SizedIcon = ({
   _icon,
   isChecked,
 }: {
-  icon: JSX.Element;
+  icon: React.JSX.Element;
   _icon: any;
   isChecked: boolean;
 }) => {
